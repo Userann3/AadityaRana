@@ -1,0 +1,9 @@
+/* Hide default cursor */
+html, body {
+  cursor: none;
+}
+
+/* Ensure interactive elements work with custom cursor */
+a, button, input, textarea, [role="button"] {
+  cursor: none !important;
+}

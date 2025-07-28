@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaPaperPlane, FaMapMarkerAlt } from 'react-icon
 
 const ContactSection = () => {
   return (
-    <section className="w-full h-screen bg-[#0a0a0a] text-white flex items-center justify-center relative overflow-hidden px-4">
+    <section className="w-full min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center relative overflow-hidden px-4">
       {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-900/10 blur-3xl animate-float"></div>
@@ -77,7 +77,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-[#111] to-[#1a1a1a] p-8 rounded-2xl shadow-2xl border border-gray-800 relative overflow-hidden"
+          className="mt-15 bg-gradient-to-br from-[#111] to-[#1a1a1a] p-8 rounded-2xl shadow-2xl border border-gray-800 relative overflow-hidden"
         >
           {/* Form gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-rose-900/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>

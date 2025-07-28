@@ -6,6 +6,7 @@ import Service from '../components/Service'
 import AboutMeSection from '../components/AboutMeSection'
 import ContactSection from '../components/ContactSection'
 import Footer from '../components/Footer'
+import Projects from '../components/Projects'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <Navbar/>
     <Hero/>
     <Service/>
+    <Projects/>
     <SkillsSection/>
     <AboutMeSection/>
     <ContactSection/>

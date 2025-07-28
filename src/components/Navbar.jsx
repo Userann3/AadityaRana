@@ -11,7 +11,6 @@ const Navbar = () => {
   // Handle scroll events for 100vh sections
   useEffect(() => {
     const handleScroll = () => {
-      // Check if scrolled past 10px
       setIsScrolled(window.scrollY > 10);
 
       // Calculate scroll progress (0 to 100)
@@ -20,10 +19,10 @@ const Navbar = () => {
       const progress = (currentScroll / totalHeight) * 100;
       setScrollProgress(progress);
 
-      // Determine active section based on scroll position
+      // Determine active section
       const scrollPosition = window.scrollY + window.innerHeight / 2;
       const sectionIndex = Math.floor(scrollPosition / window.innerHeight);
-      const sections = ["home", "services", "skills", "about", "contact"];
+      const sections = ["home", "services", "projects","skills", "about", "contact"];
       
       if (sections[sectionIndex]) {
         setActiveSection(sections[sectionIndex]);
@@ -34,10 +33,10 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Smooth scroll to specific 100vh section
+  // Smooth scroll to section
   const scrollToSection = (sectionId, e) => {
     e.preventDefault();
-    const sections = ["home", "services", "skills", "about", "pricing", "contact"];
+    const sections = ["home", "services","projects", "skills", "about", "contact"];
     const sectionIndex = sections.indexOf(sectionId);
     
     if (sectionIndex >= 0) {
@@ -52,21 +51,28 @@ const Navbar = () => {
   const navItems = [
     { id: "home", label: "HOME" },
     { id: "services", label: "SERVICES" },
+    { id: "projects", label: "PROJECTS" },
     { id: "skills", label: "SKILLS" },
     { id: "about", label: "ABOUT ME" },
-    // { id: "pricing", label: "PRICING" },
     { id: "contact", label: "CONTACT" },
   ];
 
   return (
     <>
-      {/* Scroll progress indicator */}
-      <div 
-        className="fixed top-0 left-0 h-1 z-50 bg-gradient-to-r from-purple-400 to-pink-300" 
-        style={{ width: `${scrollProgress}%` }}
-      />
+      {/* Enhanced Scroll Progress Bar */}
+      <div className="fixed top-0 left-0 w-full h-1 z-50 bg-gray-800/50">
+        <div 
+          className="h-full bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 transition-all duration-300 ease-out"
+          style={{ 
+            width: `${scrollProgress}%`,
+            boxShadow: '0 0 10px rgba(219, 39, 119, 0.5)'
+          }}
+        >
+          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full bg-white"></div>
+        </div>
+      </div>
       
-      <nav className={`fixed w-full z-50 bg-black/90 backdrop-blur-sm text-white transition-all duration-300 ${isScrolled ? 'py-3 shadow-xl' : 'py-5 md:py-6'}`}>
+      <nav className={`fixed w-full z-40 bg-black/90 backdrop-blur-sm text-white transition-all duration-300 ${isScrolled ? 'py-3 shadow-xl' : 'py-5 md:py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between">
             {/* Logo */}

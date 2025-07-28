@@ -126,13 +126,13 @@ const SkillsSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="px-8 py-3.5 bg-gradient-to-r from-purple-600 to-rose-500 text-white font-medium rounded-lg shadow-lg hover:shadow-xl hover:shadow-rose-500/30 transition-all"
           >
             Explore Full Portfolio
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
 

@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaHeart } from 'react-icons/fa';
 
+
 const Footer = () => {
+  const formLink = "https://forms.gle/moeRMAWYKkRswn3W8";
+
   return (
     <footer className="w-full bg-[#0a0a0a] text-white border-t border-gray-900 relative overflow-hidden">
       {/* Floating background elements */}
@@ -107,25 +110,19 @@ const Footer = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h4 className="text-lg font-semibold text-white">Newsletter</h4>
-            <p className="text-gray-400">
-              Subscribe to get updates about my latest projects and articles.
-            </p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 bg-[#1a1a1a] border border-gray-800 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-rose-500 text-white"
-              />
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-purple-600 to-rose-500 text-white px-4 rounded-lg"
-              >
-                Subscribe
-              </motion.button>
-            </form>
+            <h4 className="text-lg font-semibold text-white">Availability</h4>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+              <span className="text-gray-400">Currently accepting new projects</span>
+            </div>
+            <motion.a
+              href={formLink}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-gradient-to-r from-purple-600 to-rose-500 text-white px-6 py-3 rounded-lg font-medium"
+            >
+              Hire Me
+            </motion.a>
           </motion.div>
         </div>
 
@@ -143,7 +140,7 @@ const Footer = () => {
           <div>
             &copy; {new Date().getFullYear()} Aaditya Rana. All rights reserved.
           </div>
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
             </a>
@@ -153,9 +150,9 @@ const Footer = () => {
             <a href="#" className="hover:text-white transition-colors">
               Cookies
             </a>
-          </div>
+          </div> */}
           <div className="flex items-center">
-            Made with <FaHeart className="text-rose-500 mx-1" /> in India
+            Made with <FaHeart className="text-rose-500 mx-1" /> by ME
           </div>
         </motion.div>
       </div>
