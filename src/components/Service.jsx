@@ -46,8 +46,8 @@ const Service = () => {
             <p className="text-gray-400 mb-6">Perfect for portfolios, landing pages, and small business sites</p>
             <div className="mt-auto">
               <div className="flex items-end gap-2 mb-4">
-                <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹2,499</span>
-                <span className="text-gray-400 text-sm">one-time</span>
+                {/* <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹2,499</span> */}
+                {/* <span className="text-gray-400 text-sm">one-time</span> */}
               </div>
               <ul className="space-y-3 mb-6">
                 {["5 Custom Pages", "Mobile Responsive", "SEO Optimized", "1 Month Support"].map((item) => (
@@ -88,8 +88,8 @@ const Service = () => {
             <p className="text-gray-400 mb-6">For businesses needing content management and user interaction</p>
             <div className="mt-auto">
               <div className="flex items-end gap-2 mb-4">
-                <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹4,999</span>
-                <span className="text-gray-400 text-sm">starting at</span>
+                {/* <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹4,999</span> */}
+                {/* <span className="text-gray-400 text-sm">starting at</span> */}
               </div>
               <ul className="space-y-3 mb-6">
                 {["All Static Features", "User Authentication", "Database Integration", "3 Months Support"].map((item) => (
@@ -127,8 +127,8 @@ const Service = () => {
             <p className="text-gray-400 mb-6">Complete online store with payment integration</p>
             <div className="mt-auto">
               <div className="flex items-end gap-2 mb-4">
-                <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹8,999</span>
-                <span className="text-gray-400 text-sm">starting at</span>
+                {/* <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 text-transparent bg-clip-text">₹8,999</span> */}
+                {/* <span className="text-gray-400 text-sm">starting at</span> */}
               </div>
               <ul className="space-y-3 mb-6">
                 {["All Dynamic Features", "Product Management", "Payment Gateway", "6 Months Support"].map((item) => (
